@@ -2,6 +2,7 @@
  * Post Loader Module
  * Handles markdown loading, parsing, and Giscus comments
  */
+
 (function() {
   'use strict';
 
@@ -128,7 +129,7 @@
       postDate.textContent = formatDate(metadata.date);
       postDate.setAttribute('datetime', metadata.date);
     }
-
+  
     // Category
     if (postCategory && metadata.category) {
       postCategory.textContent = metadata.category;
@@ -181,9 +182,9 @@
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
     script.setAttribute('data-repo', 'jaykimdevop/jaykimdevop.github.io');
-    script.setAttribute('data-repo-id', 'YOUR_REPO_ID'); // 사용자가 설정해야 함
+    script.setAttribute('data-repo-id', 'jaykimdevop'); // 사용자가 설정해야 함
     script.setAttribute('data-category', 'General');
-    script.setAttribute('data-category-id', 'YOUR_CATEGORY_ID'); // 사용자가 설정해야 함
+    script.setAttribute('data-category-id', 'jaykimdevop.github.io'); // 사용자가 설정해야 함
     script.setAttribute('data-mapping', 'pathname');
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
