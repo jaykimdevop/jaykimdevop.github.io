@@ -148,6 +148,9 @@
     if (metadata.description) {
       updateMetaDescription(metadata.description);
     }
+
+    // Update og:title for Giscus title mapping
+    updateMetaTag('og:title', title, true);
   }
 
   /**
@@ -170,6 +173,20 @@
   }
 
   /**
+   * Update or create meta tag
+   */
+  function updateMetaTag(name, content, property = false) {
+    const attr = property ? 'property' : 'name';
+    let meta = document.querySelector(`meta[${attr}="${name}"]`);
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute(attr, name);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
+  }
+
+  /**
    * Load Giscus comments
    */
   function loadGiscus() {
@@ -182,17 +199,16 @@
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
     script.setAttribute('data-repo', 'jaykimdevop/jaykimdevop.github.io');
-    script.setAttribute('data-repo-id', 'jaykimdevop'); // 사용자가 설정해야 함
+    script.setAttribute('data-repo-id', 'R_kgDOQec2DQ');
     script.setAttribute('data-category', 'General');
-    script.setAttribute('data-category-id', 'jaykimdevop.github.io'); // 사용자가 설정해야 함
+    script.setAttribute('data-category-id', 'DIC_kwDOQec2Dc4CzI0S');
     script.setAttribute('data-mapping', 'pathname');
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
-    script.setAttribute('data-emit-metadata', '1');
-    script.setAttribute('data-input-position', 'top');
-    script.setAttribute('data-theme', giscusTheme);
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', 'preferred_color_scheme');
     script.setAttribute('data-lang', 'ko');
-    script.setAttribute('data-loading', 'lazy');
     script.crossOrigin = 'anonymous';
     script.async = true;
 
