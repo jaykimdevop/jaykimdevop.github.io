@@ -1,0 +1,11 @@
+[
+  {
+    "file": "example.md",
+    "title": "블로그에 오신 것을 환영합니다",
+    "date": "2025-01-26",
+    "tags": ["Welcome", "Blog"],
+    "category": "General",
+    "description": "첫 번째 블로그 게시글입니다. GitHub Pages로 구축한 정적 블로그를 소개합니다.",
+    "excerpt": "안녕하세요! jaykimdevop의 개발 블로그에 오신 것을 환영합니다. 이 블로그는 GitHub Pages를 활용한 정적 블로그로, 순수 HTML, CSS, JavaScript만으로 구축되었습니다..."
+  }
+]

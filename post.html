@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="jaykimdevop의 개발 블로그">
+  <meta name="author" content="jaykimdevop">
+  <title>게시글 - jaykimdevop's Blog</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/prism.css">
+  
+  <!-- Marked.js for Markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <!-- Prism.js for code highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⌘</span>
+        <span class="logo-text">jaykimdevop</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">← 목록으로</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="테마 변경">
+          <span class="theme-icon-light">☀️</span>
+          <span class="theme-icon-dark">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main post-main">
+    <!-- Post Header -->
+    <article class="post-article">
+      <header class="post-header">
+        <h1 id="post-title" class="post-title">Loading...</h1>
+        <div class="post-meta">
+          <time id="post-date" class="post-date"></time>
+          <span class="post-category" id="post-category"></span>
+        </div>
+        <div id="post-tags" class="post-tags">
+          <!-- Tags will be dynamically inserted -->
+        </div>
+      </header>
+
+      <!-- Post Content -->
+      <div id="post-content" class="post-content">
+        <div class="loading">
+          <span class="loading-spinner"></span>
+          <p>게시글을 불러오는 중...</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Giscus Comments -->
+    <section class="comments-section">
+      <h2 class="comments-title">댓글</h2>
+      <div id="giscus-container" class="giscus"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 jaykimdevop. Powered by GitHub Pages</p>
+      <div class="footer-links">
+        <a href="https://github.com/jaykimdevop" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/post-loader.js"></script>
+</body>
+</html>
+
